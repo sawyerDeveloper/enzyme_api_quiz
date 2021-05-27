@@ -10,7 +10,7 @@ const DataListItem = (props) => {
     return (<div style={styles.container}>
                 <h1>{props.item.selector}</h1>
                 <div>{props.item.description}</div>
-                <div><a href={props.item.link} >Learn More </a></div>
+                <div><a href={props.item.link} target="_blank">Learn More </a></div>
             </div>)
 }
 
