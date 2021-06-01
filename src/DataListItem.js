@@ -16,15 +16,16 @@ const DataListItem = (props) => {
             marginLeft: 5
         }
     }
-    return (<div style={styles.container}>
-        <div style={styles.maybe}>
-            <h1>{props.item.selector}</h1>
-            <div>{props.item.description}</div>
+    return (
+        <div style={styles.container}>
+            <div style={styles.maybe}>
+                <h1>{props.item.selector}</h1>
+                <div>{props.item.description}</div>
+            </div>
+            <div style={styles.learnMore}>
+                <a href={props.item.link} target="_blank">Learn More </a>
+            </div>
         </div>
-        <div style={styles.learnMore}>
-            <a href={props.item.link} target="_blank">Learn More </a>
-        </div>
-    </div>
     )
 }
 
