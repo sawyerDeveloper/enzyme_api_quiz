@@ -5,7 +5,6 @@ const DataListItem = (props) => {
     const styles = {
         container: {
             display: 'flex',
-            //flex: 1,
             justifyContent: 'center'
         },
         maybe: {
