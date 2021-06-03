@@ -2,8 +2,10 @@ const QuizComplete = (props) => {
 
 const styles = {
     container: {
-        fontSize: 200,
-        color: 'purple'
+        fontSize: 30,
+        color: '#52b69a',
+        backgroundColor: 'rgba(30, 96, 145, .9)',
+        width: window.innerWidth
     }
 }
 

@@ -41,7 +41,8 @@ function App() {
   const styles = {
     container: {
       marginTop: 10,
-      textAlign: 'center'
+      textAlign: 'center',
+      color: '#184e77'
     }
   }
   return (

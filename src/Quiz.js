@@ -49,9 +49,18 @@ const Quiz = (props) => {
         setCurrentAnswer(event.target.value)
     }
 
+
+
     const styles = {
         container: {
             marginTop: 10
+        },
+        modalContainer: {
+            display: 'flex',
+            position: 'absolute',
+            height: '50%',
+            top: 30,
+            left: 5
         }
     }
 
@@ -78,7 +87,9 @@ const Quiz = (props) => {
     return (
         <div style={styles.container}>
             {content}
+            <div style={styles.modalContainer}>
             {modal}
+            </div>
         </div>
     )
 

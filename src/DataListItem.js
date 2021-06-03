@@ -8,11 +8,15 @@ const DataListItem = (props) => {
             justifyContent: 'center'
         },
         maybe: {
-            alignItems: 'center'
+            alignItems: 'center',
+            color: '#184e77'
         },
         learnMore: {
             alignSelf: 'flex-end',
-            marginLeft: 5
+            marginLeft: 5,
+        },
+        aTag: {
+            color: '#168aad'
         }
     }
     return (
@@ -22,7 +26,7 @@ const DataListItem = (props) => {
                 <div>{props.item.description}</div>
             </div>
             <div style={styles.learnMore}>
-                <a href={props.item.link} target="_blank">Learn More </a>
+                <a style ={styles.aTag} href={props.item.link} target="_blank">Learn More </a>
             </div>
         </div>
     )
