@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import QuizQuestion from './components/quiz/QuizQuestion'
 import Utils from './utils/Utils'
+import { modals } from './constants/constants'
+import QuizComplete from './components/quiz/modals/QuizComplete'
 
 const Quiz = (props) => {
 
@@ -9,6 +11,8 @@ const Quiz = (props) => {
     const [currentStep, setCurrentStep] = useState(0)
     const [currentAnswer, setCurrentAnswer] = useState(null)
     const [correctAnswer, setCorrectAnswer] = useState(null)
+    const [currentModal, setModal] = useState(null)
+
 
     const start = () => {
         const newData = Utils.createQuizData(data)
@@ -36,8 +40,9 @@ const Quiz = (props) => {
     const end = () => {
         const newCurrentData = currentData
         newCurrentData.date = new Date()
-        sessionStorage.setItem('results', JSON.stringify(newCurrentData));
-        props.openResults(newCurrentData)
+        sessionStorage.setItem('results', JSON.stringify(newCurrentData))
+        setModal(modals.QUIZ_COMPLETE)
+        //props.openResults(newCurrentData)
     }
 
     const select = (event) => {
@@ -65,9 +70,15 @@ const Quiz = (props) => {
         content = <QuizQuestion next={next} select={select} question={question} currentAnswer={currentAnswer} answers={answers} />
     }
 
+    let modal
+    if(currentStep + 1 === data.length){
+        modal = <QuizComplete />
+    }
+
     return (
         <div style={styles.container}>
             {content}
+            {modal}
         </div>
     )
 

@@ -4,12 +4,7 @@ import data from './data.json'
 import DataList from './DataList'
 import Quiz from './Quiz'
 import Results from './Results'
-
-const views = {
-  LEARN: 'learn',
-  QUIZ: 'quiz',
-  RESULTS: 'results'
-}
+import { views } from './constants/constants'
 
 function App() {
 
