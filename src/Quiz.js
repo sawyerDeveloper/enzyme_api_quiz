@@ -15,6 +15,8 @@ const Quiz = (props) => {
     const [currentAnswer, setCurrentAnswer] = useState(null)
     const [correctAnswer, setCorrectAnswer] = useState(null)
     const [resultModal, setResultModal] = useState(null)
+    const [numberCorrect, setNumberCorrect] = useState(0)
+    const [numberIncorrect, setNumberIncorrect] = useState(0)
 
 
     const start = () => {
@@ -30,8 +32,10 @@ const Quiz = (props) => {
         }else{
             if(currentAnswer === correctAnswer){
                 currentData[currentStep].correct = true
+                setNumberCorrect(numberCorrect + 1)
                 console.log('correct')
             }else{
+                setNumberIncorrect(numberIncorrect + 1)
                 console.log('not')
             }
             setCurrentStep(currentStep + 1)
@@ -43,7 +47,7 @@ const Quiz = (props) => {
     let modal 
     switch (resultModal) {
         case modals.RESTULT_MODAL:
-            modal = <ResultModal setResultModal={setResultModal} newCurrentData = {currentData}/>
+            modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect}/>
             break
     }
 

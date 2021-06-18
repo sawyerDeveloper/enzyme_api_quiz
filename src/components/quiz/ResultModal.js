@@ -1,4 +1,10 @@
+import { useState } from 'react'
+
 const ResultModal = (props) => {
+
+    const dismissModal = () => {
+        props.setResultModal(null)
+    }
 
     const styles = {
         container: {
@@ -7,34 +13,35 @@ const ResultModal = (props) => {
             backgroundColor: 'rgba(30, 96, 145, .9)',
             width: window.innerWidth
         },
-        resultsT: {
-            fontSize: 20,
-            color: 'green'
-        },
-        resultsF: {
-            fontSize: 20,
-            color: 'red'
+        tally: {
+            display: 'flex',
+            justifyContent: 'space-evenly'
         }
     }
 
-    const dismissModal = () => {
-        props.setResultModal(null)
-    }
-    
-        return(
-            <div style={styles.container}>
-                Quiz Complete!
-                <div  key={props.newCurrentData.date}>{props.newCurrentData.map(result => {
-                    return <div style={result.correct ? styles.resultsT : styles.resultsF}> 
-                        {result.question}
+
+    return (
+        <div style={styles.container}>
+            Quiz Complete!
+            <div style={styles.tally}>
+                <div>
+                    Number Correct
+                    <div>
+                        {props.numberCorrect}
                     </div>
-                })}
                 </div>
                 <div>
-                    <button onClick={dismissModal}>Dismiss</button>
+                    Number Incorrect
+                    <div>
+                        {props.numberIncorrect}
+                    </div>
                 </div>
             </div>
-        )
-    }
-    
-    export default ResultModal
+            <div>
+                <button onClick={dismissModal}>Dismiss</button>
+            </div>
+        </div>
+    )
+}
+
+export default ResultModal
