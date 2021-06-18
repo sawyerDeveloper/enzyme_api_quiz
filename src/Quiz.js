@@ -43,7 +43,7 @@ const Quiz = (props) => {
     let modal 
     switch (resultModal) {
         case modals.RESTULT_MODAL:
-            modal = <ResultModal setResultModal={setResultModal}/>
+            modal = <ResultModal setResultModal={setResultModal} newCurrentData = {currentData}/>
             break
     }
 
