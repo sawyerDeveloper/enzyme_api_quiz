@@ -4,6 +4,7 @@ const ResultModal = (props) => {
 
     const dismissModal = () => {
         props.setResultModal(null)
+        props.openLearn()
     }
 
     const styles = {
@@ -38,7 +39,7 @@ const ResultModal = (props) => {
                 </div>
             </div>
             <div>
-                <button onClick={dismissModal}>Dismiss</button>
+                <button onClick={dismissModal}>Keep Learning</button>
             </div>
         </div>
     )

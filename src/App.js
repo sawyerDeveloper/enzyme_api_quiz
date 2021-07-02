@@ -33,7 +33,7 @@ function App() {
       view = <DataList data={data} />
       break;
     case views.QUIZ:
-      view = <Quiz openResults={openResults} data={data} />
+      view = <Quiz openResults={openResults} data={data} openLearn={openLearn}/>
       break;
       case views.RESULTS:
         view = <Results data={data} />
