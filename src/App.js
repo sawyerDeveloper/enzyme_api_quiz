@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import data from './data.json'
+import data from './arrayData.json'
 import DataList from './DataList'
 import Quiz from './Quiz'
 import Results from './Results'
@@ -33,7 +33,7 @@ function App() {
       view = <DataList data={data} />
       break;
     case views.QUIZ:
-      view = <Quiz openResults={openResults} data={data} />
+      view = <Quiz openResults={openResults} data={data} openLearn={openLearn}/>
       break;
       case views.RESULTS:
         view = <Results data={data} />

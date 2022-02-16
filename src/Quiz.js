@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import QuizQuestion from './components/quiz/QuizQuestion'
 import Utils from './utils/Utils'
+import ResultModal from './components/quiz/ResultModal'
+
+const modals = {
+    RESTULT_MODAL : 'result modal'
+}
 
 const Quiz = (props) => {
 
@@ -9,6 +14,10 @@ const Quiz = (props) => {
     const [currentStep, setCurrentStep] = useState(0)
     const [currentAnswer, setCurrentAnswer] = useState(null)
     const [correctAnswer, setCorrectAnswer] = useState(null)
+    const [resultModal, setResultModal] = useState(null)
+    const [numberCorrect, setNumberCorrect] = useState(0)
+    const [numberIncorrect, setNumberIncorrect] = useState(0)
+
 
     const start = () => {
         const newData = Utils.createQuizData(data)
@@ -23,8 +32,10 @@ const Quiz = (props) => {
         }else{
             if(currentAnswer === correctAnswer){
                 currentData[currentStep].correct = true
+                setNumberCorrect(numberCorrect + 1)
                 console.log('correct')
             }else{
+                setNumberIncorrect(numberIncorrect + 1)
                 console.log('not')
             }
             setCurrentStep(currentStep + 1)
@@ -33,11 +44,18 @@ const Quiz = (props) => {
         }
     }
 
+    let modal 
+    switch (resultModal) {
+        case modals.RESTULT_MODAL:
+            modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} openLearn={props.openLearn}/>
+            break
+    }
+
     const end = () => {
         const newCurrentData = currentData
         newCurrentData.date = new Date()
         sessionStorage.setItem('results', JSON.stringify(newCurrentData));
-        props.openResults(newCurrentData)
+        setResultModal(modals.RESTULT_MODAL)
     }
 
     const select = (event) => {
@@ -47,6 +65,13 @@ const Quiz = (props) => {
     const styles = {
         container: {
             marginTop: 10
+        },
+        modalContainer: {
+            display: 'flex',
+            position: 'absolute',
+            height: '50%',
+            top: 30,
+            left: 5
         }
     }
 
@@ -68,6 +93,9 @@ const Quiz = (props) => {
     return (
         <div style={styles.container}>
             {content}
+            <div style={styles.modalContainer}>
+            {modal}
+            </div>
         </div>
     )
 

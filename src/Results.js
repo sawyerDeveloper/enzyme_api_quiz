@@ -21,7 +21,7 @@ const Results = (props) => {
                 {results.map(result => {
 
                     return <div>
-                        <div key={result.date} style={result.correct ? styles.correct : styles.incorrect}>
+                        <div key={result.question} style={result.correct ? styles.correct : styles.incorrect}>
                             {result.question}
                         </div>
                     </div>
