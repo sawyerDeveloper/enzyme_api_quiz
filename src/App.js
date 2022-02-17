@@ -54,6 +54,7 @@ function App() {
       <header>
         <button onClick={openQuiz}>Quiz</button>
         <button onClick={openLearn}>Learn</button>
+        <button onClick={openResults}>Results</button>
       </header>
       {view}
     </div>

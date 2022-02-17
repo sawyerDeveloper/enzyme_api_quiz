@@ -34,8 +34,10 @@ const Quiz = (props) => {
     }
 
     const end = () => {
-        sessionStorage.setItem('results', JSON.stringify(currentData));
-        props.openResults()
+        const newCurrentData = currentData
+        newCurrentData.date = new Date()
+        sessionStorage.setItem('results', JSON.stringify(newCurrentData));
+        props.openResults(newCurrentData)
     }
 
     const select = (event) => {
@@ -60,7 +62,6 @@ const Quiz = (props) => {
         if(!currentAnswer){
             answers = Utils.shuffle(answers)
         }
-        console.log(currentAnswer, question)
         content = <QuizQuestion next={next} select={select} question={question} currentAnswer={currentAnswer} answers={answers} />
     }
 
