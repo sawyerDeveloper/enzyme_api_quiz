@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import QuizQuestion from './components/quiz/QuizQuestion'
-import { createQuizData } from './utils/createQuizData'
-import { shuffle } from './utils/array/shuffle'
-import ResultModal from './components/quiz/ResultModal'
+import QuizQuestion from './quiz/QuizQuestion'
+import { createQuizData } from '../utils/createQuizData'
+import { shuffle } from '../utils/array/shuffle'
+import ResultModal from './results/ResultModal'
 
 const modals = {
     RESTULT_MODAL: 'result modal'

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import data from './arrayData.json'
-import DataList from './DataList'
-import Quiz from './Quiz'
-import Results from './Results'
+import data from './data/arrayData.json'
+import DataList from './components/DataList'
+import Quiz from './components/Quiz'
+import Results from './components/Results'
 
 const views = {
   LEARN: 'learn',

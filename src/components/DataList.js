@@ -1,4 +1,4 @@
-import DataListItem from "./DataListItem"
+import DataListItem from "./dataList/DataListItem"
 
 const DataList = (props) => {
 
