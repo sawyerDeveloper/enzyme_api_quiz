@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import QuizQuestion from './components/quiz/QuizQuestion'
-import Utils from './utils/Utils'
+import { createQuizData } from './utils/createQuizData'
 import ResultModal from './components/quiz/ResultModal'
 
 const modals = {
@@ -20,7 +20,7 @@ const Quiz = (props) => {
 
 
     const start = () => {
-        const newData = Utils.createQuizData(data)
+        const newData = createQuizData(data)
         setCurrentData(newData)
         setCurrentStep(0)
         setCorrectAnswer(newData[0].answers[0])
