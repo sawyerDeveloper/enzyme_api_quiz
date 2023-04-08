@@ -8,17 +8,13 @@ const modals = {
     RESTULT_MODAL: 'result modal'
 }
 
-const Quiz = (props) => {
+const Quiz = ({ data, openLearn }) => {
 
-    const data = props.data
     const [currentData, setCurrentData] = useState([])
     const [currentStep, setCurrentStep] = useState(0)
     const [currentAnswer, setCurrentAnswer] = useState(null)
     const [correctAnswer, setCorrectAnswer] = useState(null)
     const [resultModal, setResultModal] = useState(null)
-    const [numberCorrect, setNumberCorrect] = useState(0)
-    const [numberIncorrect, setNumberIncorrect] = useState(0)
-
 
     const start = () => {
         const newData = createQuizData(data)
@@ -33,10 +29,8 @@ const Quiz = (props) => {
         } else {
             if (currentAnswer === correctAnswer) {
                 currentData[currentStep].correct = true
-                setNumberCorrect(numberCorrect + 1)
                 console.log('correct')
             } else {
-                setNumberIncorrect(numberIncorrect + 1)
                 console.log('not')
             }
             setCurrentStep(currentStep + 1)
@@ -45,23 +39,54 @@ const Quiz = (props) => {
         }
     }
 
-    let modal
-    switch (resultModal) {
-        case modals.RESTULT_MODAL:
-            modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} openLearn={props.openLearn} />
-            break
-        default:
-    }
-
     const end = () => {
-        const newCurrentData = currentData
-        newCurrentData.date = new Date()
-        sessionStorage.setItem('results', JSON.stringify(newCurrentData));
+        const newData = currentData
+        newData.date = new Date()
+        sessionStorage.setItem('results', JSON.stringify(newData));
         setResultModal(modals.RESTULT_MODAL)
     }
 
     const select = (event) => {
         setCurrentAnswer(event.target.value)
+    }
+
+    const numberCorrect = currentData.reduce((acc, curr) => {
+        if (curr.correct) {
+            acc++
+        } return acc
+    }, 0)
+
+    let modal
+    switch (resultModal) {
+        case modals.RESTULT_MODAL:
+            modal = <ResultModal
+                setResultModal={setResultModal}
+                newCurrentData={currentData}
+                numberCorrect={numberCorrect}
+                numberIncorrect={currentData.length - numberCorrect}
+                openLearn={openLearn} />
+            break
+        default:
+    }
+
+    let content
+    if (currentData.length === 0) {
+        content = (
+            <div>
+                <div>Click Start to begin</div>
+                <button onClick={start}>Start</button>
+            </div>)
+    } else {
+        let { answers, question } = currentData[currentStep]
+        if (!currentAnswer) {
+            answers = shuffle(answers)
+        }
+        content = <QuizQuestion
+            next={next}
+            select={select}
+            question={question}
+            currentAnswer={currentAnswer}
+            answers={answers} />
     }
 
     const styles = {
@@ -77,21 +102,6 @@ const Quiz = (props) => {
         }
     }
 
-    let content
-    if (currentData.length === 0) {
-        content = (
-            <div>
-                <div>Click Start to begin</div>
-                <button onClick={start}>Start</button>
-            </div>)
-    } else {
-        let { answers, question } = currentData[currentStep]
-        if (!currentAnswer) {
-            answers = shuffle(answers)
-        }
-        content = <QuizQuestion next={next} select={select} question={question} currentAnswer={currentAnswer} answers={answers} />
-    }
-
     return (
         <div style={styles.container}>
             {content}
@@ -102,4 +112,5 @@ const Quiz = (props) => {
     )
 
 }
+
 export default Quiz

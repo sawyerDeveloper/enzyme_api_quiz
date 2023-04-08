@@ -1,4 +1,4 @@
-import QuizAnswer from "./QuizAnswer"
+import QuizAnswer from './QuizAnswer'
 
 const QuizQuestion = (props) => {
 
