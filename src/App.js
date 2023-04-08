@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import data from './data/arrayData.json'
+import data from './data/data.json'
 import DataList from './components/DataList'
 import Quiz from './components/Quiz'
 import Results from './components/Results'
