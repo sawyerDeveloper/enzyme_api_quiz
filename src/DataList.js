@@ -13,7 +13,7 @@ const DataList = (props) => {
             <h1>Learn</h1>
             {props.data.map((item) => {
                 return (
-                    <DataListItem key={item.selector} item={item}/>
+                    <DataListItem key={item.question} item={item}/>
                 )
             })}
         </div>

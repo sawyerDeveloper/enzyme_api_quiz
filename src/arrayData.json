@@ -1,0 +1,18 @@
+[
+    {
+        "question": "Array.prototype.concat()",
+        "answer": "Used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+        "learn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+    },
+    {
+        "question": "Array.prototype.at()",
+        "answer": "Takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at"
+    },
+    {
+        "question": "Array.prototype.copyWithin()",
+        "answer": "Shallow copies part of an array to another location in the same array and returns it without modifying its length.",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin"
+    }
+    
+]

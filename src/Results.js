@@ -4,6 +4,12 @@ const Results = (props) => {
         container: {
             display: 'flex',
             flexDirection: 'column'
+        },
+        correct: {
+            color: 'green'
+        },
+        incorrect: {
+            color: 'red'
         }
     }
 
@@ -13,8 +19,12 @@ const Results = (props) => {
             <h1>Results</h1>
             <div>
                 {results.map(result => {
-                    
-                    return <div></div>
+
+                    return <div key={result.question}>
+                        <div style={result.correct ? styles.correct : styles.incorrect}>
+                            {result.question}
+                        </div>
+                    </div>
                 })}
             </div>
         </div>
