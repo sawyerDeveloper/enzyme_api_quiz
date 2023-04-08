@@ -22,16 +22,20 @@ export const createQuizData = (data) => {
             const index = Math.floor(Math.random() * Math.floor(quizdata.length))
             const answer = quizdata[index].answer
             answers.push(answer)
-            
+
             //  Remove the answer we are using from the temporary quzData array
             quizdata = quizdata.filter(item => item.answer !== answer)
         }
 
         return answers
     }
+    
     const list = data.map((item) => {
-        return { question: item.question, answers: extractAnswers(item.answer), correct: false }
+        return {
+            question: item.question,
+            answers: extractAnswers(item.answer), correct: false
+        }
     })
-    console.log('list',list)
+    console.log('list', list)
     return list
 }
