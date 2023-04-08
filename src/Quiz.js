@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import QuizQuestion from './components/quiz/QuizQuestion'
 import { createQuizData } from './utils/createQuizData'
+import { shuffle } from './utils/array/shuffle'
 import ResultModal from './components/quiz/ResultModal'
 
 const modals = {
-    RESTULT_MODAL : 'result modal'
+    RESTULT_MODAL: 'result modal'
 }
 
 const Quiz = (props) => {
@@ -27,14 +28,14 @@ const Quiz = (props) => {
     }
 
     const next = () => {
-        if(currentStep + 1 === data.length){
+        if (currentStep + 1 === data.length) {
             end()
-        }else{
-            if(currentAnswer === correctAnswer){
+        } else {
+            if (currentAnswer === correctAnswer) {
                 currentData[currentStep].correct = true
                 setNumberCorrect(numberCorrect + 1)
                 console.log('correct')
-            }else{
+            } else {
                 setNumberIncorrect(numberIncorrect + 1)
                 console.log('not')
             }
@@ -44,10 +45,10 @@ const Quiz = (props) => {
         }
     }
 
-    let modal 
+    let modal
     switch (resultModal) {
         case modals.RESTULT_MODAL:
-            modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} openLearn={props.openLearn}/>
+            modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} openLearn={props.openLearn} />
             break
         default:
     }
@@ -77,16 +78,16 @@ const Quiz = (props) => {
     }
 
     let content
-    if(currentData.length === 0){
-        content = ( 
+    if (currentData.length === 0) {
+        content = (
             <div>
                 <div>Click Start to begin</div>
                 <button onClick={start}>Start</button>
             </div>)
     } else {
         let { answers, question } = currentData[currentStep]
-        if(!currentAnswer){
-            answers = Utils.shuffle(answers)
+        if (!currentAnswer) {
+            answers = shuffle(answers)
         }
         content = <QuizQuestion next={next} select={select} question={question} currentAnswer={currentAnswer} answers={answers} />
     }
@@ -95,7 +96,7 @@ const Quiz = (props) => {
         <div style={styles.container}>
             {content}
             <div style={styles.modalContainer}>
-            {modal}
+                {modal}
             </div>
         </div>
     )
