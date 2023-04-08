@@ -1,3 +1,16 @@
+# This repo is a tool for making a quiz out of an array of the selectors of the Enzyme API.  
+- take a quiz of multiple choice questions
+- see the results
+- learn about each Enzyme selector 
+
+I thought to do this specifically to learn the Enzyme API.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
