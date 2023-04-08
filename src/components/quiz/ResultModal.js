@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const ResultModal = (props) => {
 
     const dismissModal = () => {
@@ -19,7 +17,6 @@ const ResultModal = (props) => {
             justifyContent: 'space-evenly'
         }
     }
-
 
     return (
         <div style={styles.container}>

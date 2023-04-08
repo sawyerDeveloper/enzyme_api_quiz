@@ -20,8 +20,8 @@ const Results = (props) => {
             <div>
                 {results.map(result => {
 
-                    return <div>
-                        <div key={result.question} style={result.correct ? styles.correct : styles.incorrect}>
+                    return <div key={result.question}>
+                        <div style={result.correct ? styles.correct : styles.incorrect}>
                             {result.question}
                         </div>
                     </div>

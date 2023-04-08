@@ -49,6 +49,7 @@ const Quiz = (props) => {
         case modals.RESTULT_MODAL:
             modal = <ResultModal setResultModal={setResultModal} newCurrentData={currentData} numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} openLearn={props.openLearn}/>
             break
+        default:
     }
 
     const end = () => {

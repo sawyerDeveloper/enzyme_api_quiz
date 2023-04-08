@@ -1,5 +1,3 @@
-import DataList from "./DataList";
-
 const DataListItem = (props) => {
 
     const styles = {
@@ -18,11 +16,11 @@ const DataListItem = (props) => {
     return (
         <div style={styles.container}>
             <div style={styles.maybe}>
-                <h1>{props.item.selector}</h1>
-                <div>{props.item.description}</div>
+                <h1>{props.item.question}</h1>
+                <div>{props.item.answer}</div>
             </div>
             <div style={styles.learnMore}>
-                <a href={props.item.link} target="_blank">Learn More </a>
+                <a href={props.item.learn} rel="noreferrer" target="_blank">Learn More </a>
             </div>
         </div>
     )
