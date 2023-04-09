@@ -1,4 +1,4 @@
-const Results = (props) => {
+const Results = () => {
 
     const styles = {
         container: {
@@ -14,12 +14,12 @@ const Results = (props) => {
     }
 
     const results = JSON.parse(sessionStorage.getItem('results'))
+
     return (
         <div style={styles.container}>
             <h1>Results</h1>
             <div>
-                {results.map(result => {
-
+                {results && results.map(result => {
                     return <div key={result.question}>
                         <div style={result.correct ? styles.correct : styles.incorrect}>
                             {result.question}
