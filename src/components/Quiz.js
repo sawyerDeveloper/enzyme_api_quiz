@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import QuizQuestion from './quiz/QuizQuestion'
+import ResultModal from './results/ResultModal'
 import { createQuizData } from '../utils/createQuizData'
 import { shuffle } from '../utils/array/shuffle'
-import ResultModal from './results/ResultModal'
 
 const modals = {
     RESTULT_MODAL: 'result modal'
 }
 
-const Quiz = ({ data, openLearn }) => {
+const Quiz = ({ data, openResults }) => {
 
     const [currentData, setCurrentData] = useState([])
     const [currentStep, setCurrentStep] = useState(0)
@@ -64,7 +64,7 @@ const Quiz = ({ data, openLearn }) => {
                 newCurrentData={currentData}
                 numberCorrect={numberCorrect}
                 numberIncorrect={currentData.length - numberCorrect}
-                openLearn={openLearn} />
+                openLearn={openResults} />
             break
         default:
     }

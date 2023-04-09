@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import data from './data/data.json'
 import DataList from './components/DataList'
 import Quiz from './components/Quiz'
@@ -33,11 +32,11 @@ function App() {
       view = <DataList data={data} />
       break;
     case views.QUIZ:
-      view = <Quiz openResults={openResults} data={data} openLearn={openLearn}/>
+      view = <Quiz openResults={openResults} data={data}/>
       break;
-      case views.RESULTS:
-        view = <Results data={data} />
-        break;
+    case views.RESULTS:
+      view = <Results data={data} />
+      break;
     default:
       view = <DataList data={data} />
       break;
@@ -49,6 +48,7 @@ function App() {
       textAlign: 'center'
     }
   }
+
   return (
     <div style={styles.container}>
       <header>

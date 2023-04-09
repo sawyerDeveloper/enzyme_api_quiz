@@ -33,9 +33,11 @@ export const createQuizData = (data) => {
     const list = data.map((item) => {
         return {
             question: item.question,
-            answers: extractAnswers(item.answer), correct: false
+            answers: extractAnswers(item.answer), 
+            url: item.url,
+            correct: false
         }
     })
-    console.log('list', list)
+
     return list
 }
