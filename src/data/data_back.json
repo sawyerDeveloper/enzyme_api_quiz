@@ -1,0 +1,307 @@
+[
+    {
+      "question": ".at(index) => ShallowWrapper",
+      "answer": "Returns a wrapper of the node at the provided index of the current wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/at.html"
+    },
+    {
+      "question": ".childAt(index) => ShallowWrapper",
+      "answer": "Returns a new wrapper with child at the specified index.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/childAt.html"
+    },
+    {
+      "question": ".children([selector]) => ShallowWrapper",
+      "answer": "Get a wrapper with all of the children nodes of the current wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/children.html"
+    },
+    {
+      "question": ".closest(selector) => ShallowWrapper",
+      "answer": "Get a wrapper with the first ancestor of the current node to match the provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/closest.html"
+    },
+    {
+      "question": ".contains(nodeOrNodes) => Boolean",
+      "answer": "Returns whether or not a given node or array of nodes is somewhere in the render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/contains.html"
+    },
+    {
+      "question": ".containsAllMatchingElements(nodes) => Boolean",
+      "answer": "Returns whether or not all the given react elements exist in the shallow render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/containsAllMatchingElements.html"
+    },
+    {
+      "question": ".containsAnyMatchingElements(nodes) => Boolean",
+      "answer": "Returns whether or not one of the given react elements exists in the shallow render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/containsAnyMatchingElements.html"
+    },
+    {
+      "question": ".containsMatchingElement(node) => Boolean",
+      "answer": "Returns whether or not a given react element exists in the shallow render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/containsMatchingElement.html"
+    },
+    {
+      "question": ".context([selector]) => Any",
+      "answer": "Returns the context of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/context.html"
+    },
+    {
+      "question": ".debug() => String",
+      "answer": "Returns a string representation of the current shallow render tree for debugging purposes.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/debug.html"
+    },
+    {
+      "question": ".dive([options]) => ShallowWrapper",
+      "answer": "Shallow render the one non-DOM child of the current wrapper, and return a wrapper around the result.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/dive.html"
+    },
+    {
+      "question": ".equals(node) => Boolean",
+      "answer": "Returns whether or not the current render tree is equal to the given node, based on the expected description.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/equals.html"
+    },
+    {
+      "question": ".every(selector) => Boolean",
+      "answer": "Returns whether or not all of the nodes in the wrapper match the provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/every.html"
+    },
+    {
+      "question": ".everyWhere(predicate) => Boolean",
+      "answer": "Returns whether or not all of the nodes in the wrapper pass the provided predicate function.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/everyWhere.html"
+    },
+    {
+      "question": ".exists([selector]) => Boolean",
+      "answer": "Returns whether or not the current node exists, or, if given a selector, whether that selector has any matching results.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/exists.html"
+    },
+    {
+      "question": ".filter(selector) => ShallowWrapper",
+      "answer": "Remove nodes in the current wrapper that do not match the provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/filter.html"
+    },
+    {
+      "question": ".filterWhere(predicate) => ShallowWrapper",
+      "answer": "Remove nodes in the current wrapper that do not return true for the provided predicate function.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/filterWhere.html"
+    },
+    {
+      "question": ".find(selector) => ShallowWrapper",
+      "answer": "Find every node in the render tree that matches the provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/find.html"
+    },
+    {
+      "question": ".findWhere(predicate) => ShallowWrapper",
+      "answer": "Find every node in the render tree that returns true for the provided predicate function.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/findWhere.html"
+    },
+    {
+      "question": ".first() => ShallowWrapper",
+      "answer": "Returns a wrapper of the first node of the current wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/first.html"
+    },
+    {
+      "question": ".forEach(fn) => ShallowWrapper",
+      "answer": "Iterates through each node of the current wrapper and executes the provided function",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/forEach.html"
+    },
+    {
+      "question": ".get(index) => ReactElement",
+      "answer": "Returns the node at the provided index of the current wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/get.html"
+    },
+    {
+      "question": ".getElement() => ReactElement",
+      "answer": "Returns the wrapped ReactElement.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/getElement.html"
+    },
+    {
+      "question": ".getElements() => Array<ReactElement>",
+      "answer": "Returns the wrapped ReactElements.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/getElements.html"
+    },
+    {
+      "question": ".getWrappingComponent() => ShallowWrapper",
+      "answer": "Returns a wrapper representing the�wrappingComponent, if one was passed.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/getWrappingComponent.html"
+    },
+    {
+      "question": ".hasClass(className) => Boolean",
+      "answer": "Returns whether or not the current node has the given class name or not.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/hasClass.html"
+    },
+    {
+      "question": ".hostNodes() => ShallowWrapper",
+      "answer": "Removes nodes that are not host nodes; e.g., this will only return HTML nodes.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/hostNodes.html"
+    },
+    {
+      "question": ".html() => String",
+      "answer": "Returns a static HTML rendering of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/html.html"
+    },
+    {
+      "question": ".instance() => ReactComponent",
+      "answer": "Returns the instance of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/instance.html"
+    },
+    {
+      "question": ".invoke(propName)(...args) => Any",
+      "answer": "Invokes a prop function on the current node and returns the function's return description.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/invoke.html"
+    },
+    {
+      "question": ".is(selector) => Boolean",
+      "answer": "Returns whether or not the current node matches a provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/is.html"
+    },
+    {
+      "question": ".isEmpty() => Boolean",
+      "answer": "Deprecated: Use�.exists()�instead.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/isEmpty.html"
+    },
+    {
+      "question": ".isEmptyRender() => Boolean",
+      "answer": "Returns whether or not the current component returns a falsy description.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/isEmptyRender.html"
+    },
+    {
+      "question": ".selector() => String",
+      "answer": "Returns the selector of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/selector.html"
+    },
+    {
+      "question": ".last() => ShallowWrapper",
+      "answer": "Returns a wrapper of the last node of the current wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/last.html"
+    },
+    {
+      "question": ".map(fn) => Array",
+      "answer": "Maps the current array of nodes to another array.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/map.html"
+    },
+    {
+      "question": ".matchesElement(node) => Boolean",
+      "answer": "Returns whether or not a given react element matches the shallow render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/matchesElement.html"
+    },
+    {
+      "question": ".name() => String",
+      "answer": "Returns the name of the current node of the wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/name.html"
+    },
+    {
+      "question": ".not(selector) => ShallowWrapper",
+      "answer": "Remove nodes in the current wrapper that match the provided selector. (inverse of�.filter())",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/not.html"
+    },
+    {
+      "question": ".parent() => ShallowWrapper",
+      "answer": "Get a wrapper with the direct parent of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/parent.html"
+    },
+    {
+      "question": ".parents([selector]) => ShallowWrapper",
+      "answer": "Get a wrapper with all of the parents (ancestors) of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/parents.html"
+    },
+    {
+      "question": ".prop(selector) => Any",
+      "answer": "Returns the named prop of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/prop.html"
+    },
+    {
+      "question": ".props() => Object",
+      "answer": "Returns the props of the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/props.html"
+    },
+    {
+      "question": ".reduce(fn[, initialdescription]) => Any",
+      "answer": "Reduces the current array of nodes to a description",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/reduce.html"
+    },
+    {
+      "question": ".reduceRight(fn[, initialdescription]) => Any",
+      "answer": "Reduces the current array of nodes to a description, from right to left.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/reduceRight.html"
+    },
+    {
+      "question": ".render() => CheerioWrapper",
+      "answer": "Returns a CheerioWrapper of the current node's subtree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/render.html"
+    },
+    {
+      "question": ".renderProp(selector)() => ShallowWrapper",
+      "answer": "Returns a wrapper of the node rendered by the provided render prop.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/renderProp.html"
+    },
+    {
+      "question": ".setContext(context) => ShallowWrapper",
+      "answer": "Manually sets context of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setContext.html"
+    },
+    {
+      "question": ".setProps(nextProps[, callback]) => ShallowWrapper",
+      "answer": "Manually sets props of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setProps.html"
+    },
+    {
+      "question": ".setState(nextState) => ShallowWrapper",
+      "answer": "Manually sets state of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setState.html"
+    },
+    {
+      "question": ".shallow([options]) => ShallowWrapper",
+      "answer": "Shallow renders the current node and returns a shallow wrapper around it.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/shallow.html"
+    },
+    {
+      "question": ".simulate(event[, data]) => ShallowWrapper",
+      "answer": "Simulates an event on the current node.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/simulate.html"
+    },
+    {
+      "question": ".slice([begin[, end]]) => ShallowWrapper",
+      "answer": "Returns a new wrapper with a subset of the nodes of the original wrapper, according to the rules of�Array#slice.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/slice.html"
+    },
+    {
+      "question": ".some(selector) => Boolean",
+      "answer": "Returns whether or not any of the nodes in the wrapper match the provided selector.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/some.html"
+    },
+    {
+      "question": ".someWhere(predicate) => Boolean",
+      "answer": "Returns whether or not any of the nodes in the wrapper pass the provided predicate function.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/someWhere.html"
+    },
+    {
+      "question": ".state([selector]) => Any",
+      "answer": "Returns the state of the root component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/state.html"
+    },
+    {
+      "question": ".tap(intercepter) => Self",
+      "answer": "Taps into the wrapper method chain. Helpful for debugging.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/tap.html"
+    },
+    {
+      "question": ".text() => String",
+      "answer": "Returns a string representation of the text nodes in the current render tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/text.html"
+    },
+    {
+      "question": ".type() => String|Function|null",
+      "answer": "Returns the type of the current node of the wrapper.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/type.html"
+    },
+    {
+      "question": ".unmount() => ShallowWrapper",
+      "answer": "A method that un-mounts the component.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/unmount.html"
+    },
+    {
+      "question": ".update() => ShallowWrapper",
+      "answer": "Syncs the enzyme component tree snapshot with the react component tree.",
+      "url": "https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/update.html"
+    }
+   ]

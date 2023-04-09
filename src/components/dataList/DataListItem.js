@@ -20,7 +20,7 @@ const DataListItem = (props) => {
                 <div>{props.item.answer}</div>
             </div>
             <div style={styles.learnMore}>
-                <a href={props.item.learn} rel="noreferrer" target="_blank">Learn More </a>
+                <a href={props.item.url} rel="noreferrer" target="_blank">Learn More </a>
             </div>
         </div>
     )
