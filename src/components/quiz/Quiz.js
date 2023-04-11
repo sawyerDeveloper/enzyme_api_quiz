@@ -64,7 +64,8 @@ const Quiz = ({ data, openResults }) => {
                 newCurrentData={currentData}
                 numberCorrect={numberCorrect}
                 numberIncorrect={currentData.length - numberCorrect}
-                openLearn={openResults} />
+                openLearn={openResults}
+            />
             break
         default:
     }
@@ -87,7 +88,8 @@ const Quiz = ({ data, openResults }) => {
             select={select}
             question={question}
             currentAnswer={currentAnswer}
-            answers={answers} />
+            answers={answers}
+        />
     }
 
     const styles = {

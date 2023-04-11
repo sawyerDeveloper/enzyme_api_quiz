@@ -5,7 +5,14 @@ const QuizAnswer = (props) => {
     return (
         <div>
             <label>
-                <input checked={checked} onChange={select} type="radio" id={answer} name="answer" value={answer} />
+                <input
+                    checked={checked}
+                    onChange={select}
+                    type="radio"
+                    id={answer}
+                    name="answer"
+                    value={answer}
+                />
                 {answer}
             </label>
         </div>

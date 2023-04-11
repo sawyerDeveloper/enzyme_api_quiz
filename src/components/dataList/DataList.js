@@ -8,6 +8,7 @@ const DataList = (props) => {
             flexDirection: 'column'
         }
     }
+    
     return (
         <div style={styles.container}>
             <h1>Learn</h1>
