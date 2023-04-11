@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import QuizQuestion from './quiz/QuizQuestion'
-import ResultModal from './results/ResultModal'
-import { createQuizData } from '../utils/createQuizData'
-import { shuffle } from '../utils/array/shuffle'
+import QuizQuestion from './QuizQuestion'
+import ResultModal from '../results/ResultModal'
+import { createQuizData } from '../../utils/createQuizData'
+import { shuffle } from '../../utils/array/shuffle'
 
 const modals = {
     RESTULT_MODAL: 'result modal'
@@ -79,8 +79,9 @@ const Quiz = ({ data, openResults }) => {
     } else {
         let { answers, question } = currentData[currentStep]
         if (!currentAnswer) {
-            answers = shuffle(answers)
+            shuffle(answers)
         }
+
         content = <QuizQuestion
             next={next}
             select={select}

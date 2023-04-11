@@ -1,4 +1,4 @@
-import ResultsItem from "./results/ResultsItem"
+import ResultsItem from "./ResultsItem"
 
 const Results = () => {
 
