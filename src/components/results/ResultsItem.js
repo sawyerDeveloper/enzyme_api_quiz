@@ -16,14 +16,16 @@ const ResultsItem = ({ result }) => {
         }
     }
 
-    return (<div style={styles.container}>
-                <div style={result.correct ? styles.correct : styles.incorrect}>
-                    {result.question}
-                </div>
-                <div style={styles.learnMore}>
-                    <a href={result.url} rel="noreferrer" target="_blank">Learn More</a>
-                </div>
-            </div>)
+    return (
+        <div style={styles.container}>
+            <div style={result.correct ? styles.correct : styles.incorrect}>
+                {result.question}
+            </div>
+            <div style={styles.learnMore}>
+                <a href={result.url} rel="noreferrer" target="_blank">Learn More</a>
+            </div>
+        </div>
+    )
 }
 
 export default ResultsItem

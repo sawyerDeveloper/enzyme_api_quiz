@@ -29,9 +29,9 @@ const Quiz = ({ data, openResults }) => {
         } else {
             if (currentAnswer === correctAnswer) {
                 currentData[currentStep].correct = true
-                console.log('correct')
+                //console.log('correct')
             } else {
-                console.log('not')
+                //console.log('not')
             }
             setCurrentStep(currentStep + 1)
             setCurrentAnswer(null)
