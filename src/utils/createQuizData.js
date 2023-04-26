@@ -6,7 +6,7 @@ export const createQuizData = (data) => {
 
     const extractAnswers = (answer) => {
 
-        //   Deepish copy
+        //   Deep copy
         quizdata = data.map((item) => {
             return {
                 question: item.question,
@@ -39,7 +39,7 @@ export const createQuizData = (data) => {
     }
     
     const list = data.map((item) => {
-        //console.log(item)
+
         return {
             question: item.question,
             answers: extractAnswers(item.answer), 
@@ -47,6 +47,6 @@ export const createQuizData = (data) => {
             correct: false
         }
     })
-console.log(list)
+
     return list
 }
