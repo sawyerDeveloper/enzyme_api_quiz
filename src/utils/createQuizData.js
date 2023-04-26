@@ -1,13 +1,21 @@
-import { shuffle } from "./array/shuffle"
+import { shuffle } from './array/shuffle'
 
 export const createQuizData = (data) => {
 
-    let quizdata
+    let quizdata = []
 
     const extractAnswers = (answer) => {
 
-        //  Shuffle data passed in
-        quizdata = shuffle(data).concat()
+        //   Deep copy
+        quizdata = data.map((item) => {
+            return {
+                question: item.question,
+                answer: item.answer,
+                url: item.url
+            }
+        })
+
+        shuffle(quizdata)
 
         //  Create data 
         let answers = [answer]
@@ -23,7 +31,7 @@ export const createQuizData = (data) => {
             const answer = quizdata[index].answer
             answers.push(answer)
 
-            //  Remove the answer we are using from the temporary quzData array
+            //  Remove the answer we are using from the temporary quizData array
             quizdata = quizdata.filter(item => item.answer !== answer)
         }
 
@@ -31,6 +39,7 @@ export const createQuizData = (data) => {
     }
     
     const list = data.map((item) => {
+
         return {
             question: item.question,
             answers: extractAnswers(item.answer), 

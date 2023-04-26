@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import QuizQuestion from './quiz/QuizQuestion'
-import ResultModal from './results/ResultModal'
-import { createQuizData } from '../utils/createQuizData'
-import { shuffle } from '../utils/array/shuffle'
+import QuizQuestion from './QuizQuestion'
+import ResultModal from '../results/ResultModal'
+import { createQuizData } from '../../utils/createQuizData'
+import { shuffle } from '../../utils/array/shuffle'
 
 const modals = {
     RESTULT_MODAL: 'result modal'
@@ -29,9 +29,9 @@ const Quiz = ({ data, openResults }) => {
         } else {
             if (currentAnswer === correctAnswer) {
                 currentData[currentStep].correct = true
-                console.log('correct')
+                //console.log('correct')
             } else {
-                console.log('not')
+                //console.log('not')
             }
             setCurrentStep(currentStep + 1)
             setCurrentAnswer(null)
@@ -64,7 +64,8 @@ const Quiz = ({ data, openResults }) => {
                 newCurrentData={currentData}
                 numberCorrect={numberCorrect}
                 numberIncorrect={currentData.length - numberCorrect}
-                openLearn={openResults} />
+                openLearn={openResults}
+            />
             break
         default:
     }
@@ -79,14 +80,16 @@ const Quiz = ({ data, openResults }) => {
     } else {
         let { answers, question } = currentData[currentStep]
         if (!currentAnswer) {
-            answers = shuffle(answers)
+            shuffle(answers)
         }
+
         content = <QuizQuestion
             next={next}
             select={select}
             question={question}
             currentAnswer={currentAnswer}
-            answers={answers} />
+            answers={answers}
+        />
     }
 
     const styles = {

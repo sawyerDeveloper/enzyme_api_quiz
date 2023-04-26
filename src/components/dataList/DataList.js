@@ -1,4 +1,4 @@
-import DataListItem from './dataList/DataListItem'
+import DataListItem from './DataListItem'
 
 const DataList = (props) => {
 
@@ -8,6 +8,7 @@ const DataList = (props) => {
             flexDirection: 'column'
         }
     }
+    
     return (
         <div style={styles.container}>
             <h1>Learn</h1>
