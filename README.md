@@ -3,8 +3,6 @@
 - see the results
 - learn about each Enzyme selector 
 
-I thought to do this specifically to learn the Enzyme API.
-
 
 
 
